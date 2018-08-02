@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Video Game Site Webring
 email: jbdodson@gmail.com
-description: Video Game Site Webring is platform for discovering retro video game & other non top 50 video game sites.
+description: Video Game Site Webring is a platform for discovering retro video game & other non top 50 video game sites.
 
 
 baseurl: "" # the subpath of your site, e.g. /blog

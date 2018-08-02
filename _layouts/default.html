@@ -16,13 +16,13 @@
   <body>
     <!-- Begin page content -->
     <main role="main" class="container">
-      <h1 class="mt-2"><a class="text-secondary" href="{{ site.baseurl }}{% link index.html %}">{{ site.title }}</a></h1>
+      <h1 class="mt-2"><a class="text-secondary" href="{% link index.html %}">{{ site.title }}</a></h1>
 
       <div class="content">
         {{content}}
       </div>
 
-      <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a> | <a href="{{ site.baseurl }}{% link about.html %}">Read more about this project</a></small>
+      <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a> | <a href="{% link about.html %}">Read more about this project</a></small>
     </main>
   </body>
 </html>

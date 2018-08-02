@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Video Game Site Webring">
+    <meta name="author" content="">
+    <link rel="icon" href="ajax-loader.gif">
+
+    <title>Video Game Site Webring</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-2"><a class="text-secondary" href="/">Video Game Site Webring</a></h1>
+
+      <div class="content">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  jQuery.get("webring.txt", function(data) {
+    // grab the webring and get all the websites and strip it of any nil or empty array values
+    var websites = data.split("\n");
+    websites = websites.filter(function(e){return e});
+
+    var website = websites[Math.floor(Math.random() * websites.length)];
+
+    $(".website").attr("href", website);
+    $(".website").text(website);
+    //window.location.replace(website);
+  });
+</script>
+
+<p class="lead">Video Game Site Webring is plaform for discovering retro video game & other non top 50 video game sites.</p>
+<p><img src="ajax-loader.gif" /> You are being redirected to <a href="" class="website"></a> now!</p>
+
+      </div>
+
+      <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a> | <a href="/about/">Read more about this project</a></small>
+    </main>
+  </body>
+</html>

@@ -19,27 +19,11 @@
       <h1 class="mt-2"><a class="text-secondary" href="index.html">Video Game Site Webring</a></h1>
 
       <div class="content">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  jQuery.get("webring.txt", function(data) {
-    // grab the webring and get all the websites and strip it of any nil or empty array values
-    var websites = data.split("\n");
-    websites = websites.filter(function(e){return e});
-
-    var website = websites[Math.floor(Math.random() * websites.length)];
-
-    $(".website").attr("href", website);
-    $(".website").text(website);
-    window.location.replace(website);
-  });
-</script>
-
-<p class="lead">Video Game Site Webring is a platform for discovering video game sites you've never heard of.</p>
-<p><img src="ajax-loader.gif" /> You are being redirected to <a href="" class="website" target="_blank"></a> now!</p>
+        <p class="lead">Video Game Site Webring is a platform for discovering video game sites you've never heard of.</p>
 
       </div>
 
-      <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a> | <a href="about.html">Read more about this project</a></small>
+      <small><a href="random.html" target="_blank">Random site</a></small> | <small><a href="about.html">Read more about this project</a></small> | <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a>
     </main>
   </body>
 </html>

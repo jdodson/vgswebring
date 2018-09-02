@@ -2,20 +2,4 @@
 layout: default
 ---
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  jQuery.get("webring.txt", function(data) {
-    // grab the webring and get all the websites and strip it of any nil or empty array values
-    var websites = data.split("\n");
-    websites = websites.filter(function(e){return e});
-
-    var website = websites[Math.floor(Math.random() * websites.length)];
-
-    $(".website").attr("href", website);
-    $(".website").text(website);
-    window.location.replace(website);
-  });
-</script>
-
 <p class="lead">{{site.description}}</p>
-<p><img src="ajax-loader.gif" /> You are being redirected to <a href="" class="website" target="_blank"></a> now!</p>

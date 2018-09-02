@@ -1,6 +1,6 @@
 # Video Game Site Webring
 
-Is a platform for discovering retro video game & other non top 20 video game sites.
+Is a platform for discovering video game sites you've never heard of.
 
 # Include the webring on your site or share it on social
 

@@ -19,26 +19,23 @@
       <h1 class="mt-2"><a class="text-secondary" href="index.html">Video Game Site Webring</a></h1>
 
       <div class="content">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  jQuery.get("webring.txt", function(data) {
+    // grab the webring and get all the websites and strip it of any nil or empty array values
+    var websites = data.split("\n");
+    websites = websites.filter(function(e){return e});
 
-<div class="container">
-  <h1>404</h1>
+    var website = websites[Math.floor(Math.random() * websites.length)];
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    $(".website").attr("href", website);
+    $(".website").text(website);
+    window.location.replace(website);
+  });
+</script>
+
+<p class="lead">Video Game Site Webring is a platform for discovering video game sites you've never heard of.</p>
+<p><img src="ajax-loader.gif" /> You are being redirected to <a href="" class="website" target="_blank"></a> now!</p>
 
       </div>
 

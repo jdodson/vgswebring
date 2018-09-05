@@ -2,4 +2,21 @@
 layout: default
 ---
 
+<script>
+  $( document ).ready(function() {
+    randomWebsite(false);
+
+    $( ".random-site" ).click(function() {
+      randomWebsite(false);
+    });
+  });
+</script>
+
 <p class="lead">{{site.description}}</p>
+
+<p>
+  <img src="ajax-loader.gif" class="pacman" />
+  <a role="button" class="btn btn-primary btn-md random-site" href="" target="_">
+    Take Me To A Random Video Game Site
+  </a>
+</p>

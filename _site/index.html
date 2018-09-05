@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Video Game Site Webring">
+    <meta name="description" content="Video Game Site Webring is a website for discovering video game sites you've never heard of.">
     <meta name="author" content="">
     <link rel="icon" href="ajax-loader.gif">
 
@@ -11,19 +11,40 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/vgswr.js"></script>
   </head>
 
   <body>
     <!-- Begin page content -->
-    <main role="main" class="container">
+    <main role="main" class="container" id="main">
       <h1 class="mt-2"><a class="text-secondary" href="index.html">Video Game Site Webring</a></h1>
 
       <div class="content">
-        <p class="lead">Video Game Site Webring is a platform for discovering video game sites you've never heard of.</p>
+        <script>
+  $( document ).ready(function() {
+    randomWebsite(false);
+
+    $( ".random-site" ).click(function() {
+      randomWebsite(false);
+    });
+  });
+</script>
+
+<p class="lead">is a website for discovering video game sites you've never heard of.</p>
+
+<p>
+  <img src="ajax-loader.gif" class="pacman" />
+  <a role="button" class="btn btn-primary btn-md random-site" href="" target="_">
+    Take Me To A Random Video Game Site
+  </a>
+</p>
 
       </div>
 
-      <small><a href="random.html" target="_blank">Random site</a></small> | <small><a href="about.html">Read more about this project</a></small> | <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a>
+      <div class="footer">
+        <small><a href="about.html">Read more about this project</a></small> | <small><a href="submit.html" target="_blank">Submit Site</a></small> | <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a></small>
+      </div>
     </main>
   </body>
 </html>

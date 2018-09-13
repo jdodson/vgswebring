@@ -4,15 +4,57 @@ layout: default
 
 <script>
   $( document ).ready(function() {
-    loadAllSites();
+    jQuery.get("webring.txt", function(data) {
+      var websites = getWebsiteListFromData(data);
+
+      $(".websites .loading").remove();
+      $(".websites").append("<ul class='list-group'></ul>");
+
+      for (var w in websites)
+      {
+        $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
+      }
+    });
   });
 </script>
 
-<h2 class="lead">Site Submission</h2>
+<p>
+  The goal of this webring is to point to game sites that might not get the attention they deserve.  That said,
+  this goal isn't mean to be exclusive but provide some kind of curation to keep it managable.  If you have a
+  game site not in this list or have any questions contact me!
+</p>
+
+<p>
+  To get your site added to the list <a href="about.html">contact me</a> or submit a <a href="https://help.github.com/articles/about-pull-requests/" target="_blank">GitHub pull request</a>.
+</p>
+
+<h2>What Kinds of Game Sites Can We Include?</h3>
+
+<ul>
+  <li>Game communities</li>
+  <li>News websites</li>
+  <li>Retro websites</li>
+  <li>Console websites</li>
+  <li>Game blogs</li>
+</ul>
+
+<h2>What Game Sites Will We Avoid?</h3>
+
+<ul>
+  <li>The very most popular video games sites. If you are IGN, Kotaku, Polygon RPS or the like you don't need the help. Nothing in the top 20.</li>
+  <li>Anything owned by a large media conglomerate.</li>
+  <li>Podcasts</li>
+  <li>YouTube & Twitch Channels</li>
+  <li>Video game sites that have not posted new content recently. If the site has a large amount of historically interesting information we can include it.</li>
+  <li>Steam key reselling websites</li>
+  <li>Loot box/crate websites</li>
+  <li>Site focusing primarily on commerce or buying and selling games</li>
+</ul>
 
 <p>
   Please check the full list below to make sure you don't submit a site we already have.
 </p>
 
 <p class="websites">
+  <span class="loading"><img src="ajax-loader.gif" class="pacman" /> LOADING LIST...</span>
 </p>

@@ -22,17 +22,3 @@ function getWebsiteListFromData(data) {
 
   return websites;
 };
-
-function loadAllSites() {
-  jQuery.get("webring.txt", function(data) {
-    var websites = getWebsiteListFromData(data);
-
-    $(".websites").append("<ul class='list-group'></ul>");
-
-    for (var w in websites)
-    {
-      $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
-    }
-
-  });
-};

@@ -14,24 +14,9 @@ Example of how to share the Video Game Webring on social:
 
     Yo kids, hit this URL to find a randomly awesome video game site! https://jdodson.github.io/vgswebring/
 
-# What kinds of video game sites do we include in the webring?
+# What's the process to get games on the list?
 
-* Game communities
-* News websites
-* Retro websites
-* Console websites
-* Game blogs
-
-# What kinds of video game sites do we avoid?
-
-* The very most popular video games sites.  If you are IGN, Kotaku, Polygon RPS or the like you don't need the help.  Nothing in the top 20.
-* Anything owned by a large media conglomerate
-* Podcasts
-* YouTube & Twitch Channels
-* Video game sites that have not posted new content recently.  If the site has a large amount of historically interesting information we can include it.
-* Steam key reselling websites
-* Loot box/crate websites
-* Site focusing primarily on commerce or buying and selling games
+  <a href="https://jdodson.github.io/vgswebring/submit.html">Read up on a few things on how to submit your game site!</a>
 
 # install
 

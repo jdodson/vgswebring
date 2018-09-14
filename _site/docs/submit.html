@@ -37,23 +37,7 @@
       <h1 class="mt-2"><a class="text-secondary" href="index.html">Video Game Site Webring</a></h1>
 
       <div class="content">
-        <script>
-  $( document ).ready(function() {
-    jQuery.get("webring.txt", function(data) {
-      var websites = getWebsiteListFromData(data);
-
-      $(".websites .loading").remove();
-      $(".websites").append("<ul class='list-group'></ul>");
-
-      for (var w in websites)
-      {
-        $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
-      }
-    });
-  });
-</script>
-
-<p>
+        <p>
   The goal of this webring is to point to game sites that might not get the attention they deserve.  That said,
   this goal isn't mean to be exclusive but provide some kind of curation to keep it managable.  If you have a
   game site not in this list or have any questions contact me!
@@ -87,17 +71,13 @@
 </ul>
 
 <p>
-  Please check the full list below to make sure you don't submit a site we already have.
-</p>
-
-<p class="websites">
-  <span class="loading"><img src="ajax-loader.gif" class="pacman" /> LOADING LIST...</span>
+  Feel free to submit anything you feel hits our guidelines and check out what sites are already <a href="list.html">in our list</a>!
 </p>
 
       </div>
 
       <div class="footer">
-        <small><a href="about.html">Read more about this project</a></small> | <small><a href="submit.html">Submit Site</a></small> | <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the source & add your website on GitHub</a></small>
+        <small><a href="about.html">About This Project</a></small> | <small><a href="submit.html">Submit Website</a></small> | <small><a href="list.html">Website List</a></small> | <small><a href="https://github.com/jdodson/vgswebring" target="_blank">View the VGW Source Code on GitHub</a></small>
       </div>
     </main>
   </body>

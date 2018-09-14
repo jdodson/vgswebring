@@ -28,3 +28,4 @@ Example of how to share the Video Game Webring on social:
 
 # build a fresh version of the site
     bundle exec jekyll build --destination docs
+    echo "vgw.io" > docs/CNAME

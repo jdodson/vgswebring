@@ -1,0 +1,27 @@
+---
+layout: default
+title: Website List
+---
+
+<script>
+  $( document ).ready(function() {
+    jQuery.get("webring.txt", function(data) {
+      var websites = getWebsiteListFromData(data);
+
+      $(".websites .loading").remove();
+      $(".websites").append("<ul class='list-group'></ul>");
+
+      for (var w in websites)
+      {
+        $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
+      }
+    });
+  });
+</script>
+
+<p>
+  Check our full list of video game sites on VGW below.  If you want to include one we don't have over to our <a href="submit.html">website submission</a>.
+
+<p class="websites">
+  <span class="loading"><img src="ajax-loader.gif" class="pacman" /> LOADING LIST...</span>
+</p>

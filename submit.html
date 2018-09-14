@@ -1,22 +1,7 @@
 ---
 layout: default
+title: Submit Website
 ---
-
-<script>
-  $( document ).ready(function() {
-    jQuery.get("webring.txt", function(data) {
-      var websites = getWebsiteListFromData(data);
-
-      $(".websites .loading").remove();
-      $(".websites").append("<ul class='list-group'></ul>");
-
-      for (var w in websites)
-      {
-        $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
-      }
-    });
-  });
-</script>
 
 <p>
   The goal of this webring is to point to game sites that might not get the attention they deserve.  That said,
@@ -52,9 +37,5 @@ layout: default
 </ul>
 
 <p>
-  Please check the full list below to make sure you don't submit a site we already have.
-</p>
-
-<p class="websites">
-  <span class="loading"><img src="ajax-loader.gif" class="pacman" /> LOADING LIST...</span>
+  Feel free to submit anything you feel hits our guidelines and check out what sites are already <a href="list.html">in our list</a>!
 </p>

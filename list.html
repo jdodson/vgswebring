@@ -9,11 +9,13 @@ title: Website List
       var websites = getWebsiteListFromData(data);
 
       $(".websites .loading").remove();
-      $(".websites").append("<ul class='list-group'></ul>");
+      $(".websites").append("<div class='list-group site-list'></div>");
 
       for (var w in websites)
       {
-        $(".websites ul").append("<li class='list-group-item'><a href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a></li>");
+        $(".websites .site-list").append(
+          "<a class='list-group-item list-grou-item-action' href='"+websites[w]+"' target='_blank'>"+websites[w]+"</a>"
+        );
       }
     });
   });
